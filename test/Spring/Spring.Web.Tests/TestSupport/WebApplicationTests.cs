@@ -50,8 +50,8 @@ namespace Spring.TestSupport
             host = AspFixtureHost.CreateInstance(virtualPath, relativePhysicalPath, this);
         }
 
-        [TestFixtureTearDown]
-        public virtual void TestFixtureTearDown()
+        [OneTimeTearDown]
+        public virtual void OneTimeTearDown()
         {
             host = AspFixtureHost.ReleaseInstance(host);
         }

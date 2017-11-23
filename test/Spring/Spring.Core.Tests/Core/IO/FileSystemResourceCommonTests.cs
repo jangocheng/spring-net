@@ -80,7 +80,7 @@ namespace Spring.Core.IO
         [Test]
         public void FileSystemResourceOpenNonExistanceFile()
         {
-            FileSystemResource fileSystemResource = CreateResourceInstance(TemporaryFileName);
+            FileSystemResource fileSystemResource = CreateResourceInstance("asdfasfadf");
             Stream inputStream;
             Assert.Throws<FileNotFoundException>(() => inputStream = fileSystemResource.InputStream);
         }

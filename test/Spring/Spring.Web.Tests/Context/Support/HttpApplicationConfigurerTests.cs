@@ -23,7 +23,7 @@
 using System.Configuration;
 using System.Reflection;
 using System.Web;
-using Common.Logging;
+using Spring.Logging;
 using NUnit.Framework;
 using Spring.Objects.Factory.Config;
 using Spring.Objects.Factory.Support;
@@ -43,7 +43,7 @@ namespace Spring.Context.Support
         [OneTimeSetUp]
         public void SetUpFixture()
         {
-            LogManager.Adapter = new Common.Logging.Simple.TraceLoggerFactoryAdapter();
+//            LoggingManager.Adapter = new Spring.Logging.Simple.TraceLoggerFactoryAdapter();
         }
 
         [SetUp]

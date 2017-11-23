@@ -43,7 +43,7 @@ namespace Spring.Web.Support
 
 				static ControlInterceptionTests()
 				{
-					Common.Logging.LogManager.Adapter = new Common.Logging.Simple.TraceLoggerFactoryAdapter();
+//					Spring.Logging.LoggingManager.Adapter = new Spring.Logging.Simple.TraceLoggerFactoryAdapter();
 				}
 
         [SetUp]

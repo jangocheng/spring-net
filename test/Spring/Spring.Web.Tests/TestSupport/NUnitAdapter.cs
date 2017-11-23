@@ -70,7 +70,7 @@ namespace Spring.TestSupport
 		/// <summary>
 		/// Do not call.  For use by NUnit only.
 		/// </summary>
-		[TearDown]
+		[OneTimeTearDown]
 		public void MasterTearDown()
 		{
 			TearDown();

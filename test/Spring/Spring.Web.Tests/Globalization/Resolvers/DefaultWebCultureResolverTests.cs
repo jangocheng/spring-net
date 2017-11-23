@@ -20,6 +20,7 @@
 
 #region Imports
 
+using System;
 using System.Globalization;
 using NUnit.Framework;
 
@@ -68,8 +69,8 @@ namespace Spring.Globalization.Resolvers
             CultureTestScope.Set();
         }
 
-        [TestFixtureTearDown]
-        public void TestFixtureTearDown()
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
         {
             CultureTestScope.Reset();
         }

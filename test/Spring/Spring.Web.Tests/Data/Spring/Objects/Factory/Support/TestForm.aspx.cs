@@ -1,11 +1,11 @@
 using System;
-using Common.Logging;
+using Spring.Logging;
 
 namespace Spring.Data.Objects.Factory.Support
 {
     public class TestForm : Spring.Web.UI.Page
     {
-        private ILog _log = LogManager.GetLogger(typeof(TestForm));
+        private ILogger _log = LoggingManager.GetLogger(typeof(TestForm));
 
         public TestForm()
         {

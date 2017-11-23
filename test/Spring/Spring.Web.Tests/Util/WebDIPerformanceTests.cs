@@ -84,7 +84,7 @@ namespace Spring.Util
         [Test, Explicit]
         public void RunTestWithDI()
         {
-//            LogManager.Adapter = new Common.Logging.Simple.TraceLoggerFactoryAdapter();
+//            LoggingManager.Adapter = new Spring.Logging.Simple.TraceLoggerFactoryAdapter();
 
             DataView dv = CreateDataSource();
             using (TestWebContext wctx = new TestWebContext("/testpath", "testpage.aspx"))
