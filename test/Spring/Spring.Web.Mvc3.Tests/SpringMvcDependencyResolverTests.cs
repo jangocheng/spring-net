@@ -18,11 +18,15 @@
 
 #endregion
 
+using System;
+using System.IO;
 using System.Linq;
 using System.Web.Mvc;
 
 using NUnit.Framework;
 using Spring.Context.Support;
+using Spring.Core.IO;
+using Spring.TestSupport;
 using Spring.Web.Mvc.Tests.Controllers;
 
 namespace Spring.Web.Mvc.Tests
@@ -36,6 +40,16 @@ namespace Spring.Web.Mvc.Tests
         public void _TestSetup()
         {
             ContextRegistry.Clear();
+
+            //
+            // As a possible artifact of using Jetbrains Resharper to execute the unit tests, the working directory of the unit test
+            // has been changed to the temporary directory used for shadow copying assemblies during test execution, so a relative path to
+            // test data can not be used.
+            //
+            // There has to be a better solution to this, but disabling Shadow Copying within Resharper doesn't seem to make a difference.
+            //
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+
             _context = new MvcApplicationContext("file://objectsMvc.xml");
             _mvcNamedContext = new MvcApplicationContext("named", false, "file://namedContextObjectsMvc.xml");
 
