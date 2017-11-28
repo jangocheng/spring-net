@@ -23,8 +23,6 @@ using System;
 using Spring.Logging;
 using NVelocity.Runtime;
 using NVelocity.Runtime.Log;
-using LogLevel=NVelocity.Runtime.Log.LogLevel;
-using LoggingManager=Spring.Logging.LoggingManager;
 
 namespace Spring.Template.Velocity
 {

@@ -44,8 +44,10 @@ namespace Spring.TestSupport
 	{
 		private bool setupCalled = false;
 
-	    protected WebFormTestCase(string virtualPath, string relativePhysicalPath) : base(virtualPath, relativePhysicalPath)
-	    {}
+	    protected WebFormTestCase(string virtualPath, string relativePhysicalPath)
+	        : base(virtualPath, relativePhysicalPath)
+	    {
+	    }
 
 	    /// <summary>
 		/// Do not call.  For use by NUnit only.

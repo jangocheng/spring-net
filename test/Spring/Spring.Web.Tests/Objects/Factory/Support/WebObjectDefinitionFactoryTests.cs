@@ -38,7 +38,7 @@ namespace Spring.Objects.Factory.Support
     public class WebObjectDefinitionFactoryTests : WebApplicationTests
     {
         public WebObjectDefinitionFactoryTests()
-            : base("/Test", "/Spring/Objects/Factory/Support")
+            : base("/Test", "/Data/Spring/Objects/Factory/Support")
         {}
 
         [Test]

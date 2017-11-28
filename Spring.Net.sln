@@ -91,7 +91,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79F495
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Web.Mvc5", "src\Spring\Spring.Web.Mvc5\Spring.Web.Mvc5.csproj", "{39AAD7EA-2ED0-4E50-8D4D-C666EA9CBFE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Web.Mvc5.Tests.2010", "test\Spring\Spring.Web.Mvc5.Tests\Spring.Web.Mvc5.Tests.2010.csproj", "{B9590252-6D58-4587-950C-475AB61FDBCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Web.Mvc5.Tests", "test\Spring\Spring.Web.Mvc5.Tests\Spring.Web.Mvc5.Tests.csproj", "{B9590252-6D58-4587-950C-475AB61FDBCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Data.NHibernate4", "src\Spring\Spring.Data.NHibernate4\Spring.Data.NHibernate4.csproj", "{D9C45177-0D80-4133-AB46-58F142DB92AA}"
 EndProject

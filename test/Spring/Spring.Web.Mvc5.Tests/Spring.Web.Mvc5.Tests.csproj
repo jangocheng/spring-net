@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Spring.Web.Mvc5.Tests</RootNamespace>
     <AssemblyName>Spring.Web.Mvc5.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\build\VS.Net.2010\Spring.Web.Mvc5.Tests\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NET_3_5;NET_4_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,6 +38,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="netstandard" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -72,10 +73,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Spring\Spring.Core\Spring.Core.2010.csproj">
-      <Project>{710961A3-0DF4-49E4-A26E-F5B9C044AC84}</Project>
-      <Name>Spring.Core.2010</Name>
-      <Private>True</Private>
+    <ProjectReference Include="..\..\..\src\Spring\Spring.Core\Spring.Core.csproj">
+      <Project>{8a750d18-1406-4664-b649-f1c6d36a861a}</Project>
+      <Name>Spring.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\src\Spring\Spring.Web.Mvc5\Spring.Web.Mvc5.csproj">
       <Project>{39aad7ea-2ed0-4e50-8d4d-c666ea9cbfe4}</Project>

@@ -1,4 +1,4 @@
-#region License
+ #region License
 
 /*
  * Copyright © 2002-2011 the original author or authors.
@@ -20,6 +20,10 @@
 
 #region Imports
 
+using System;
+using System.IO;
+using System.Web;
+using System.Web.Hosting;
 using NUnit.Framework;
 using NUnitAspEx;
 using Spring.Objects.Factory;
@@ -38,22 +42,22 @@ namespace Spring.Context.Support
     public class WebApplicationContextTests : WebFormTestCase
     {
         public WebApplicationContextTests()
-            : base("/Test", "/Spring/Context/Support/WebApplicationContextTests/")
-        {}
+            : base("/Test", "/Data/Spring/Context/Support/WebApplicationContextTests/")
+        {
+        }
 
         [Test]
         public void CanAccessContextFromNonWebThread()
         {
-            Host.Execute(new TestAction(CanAccessContextFromNonWebThreadImpl));
+            Host.Execute(CanAccessContextFromNonWebThreadImpl);
         }
 
         public static void CanAccessContextFromNonWebThreadImpl()
         {
-            IApplicationContext ctx;
+            IApplicationContext ctx = WebApplicationContext.GetRootContext();
+            Assert.IsNotNull(ctx, "Root context is null.");
 
-            ctx = WebApplicationContext.GetRootContext();
-
-            AsyncTestMethod testMethod = new AsyncTestMethod(1, new AsyncTestMethod.TestMethod(DoBackgroundWork), ctx);
+            AsyncTestMethod testMethod = new AsyncTestMethod(1, DoBackgroundWork, ctx);
             testMethod.Start();
             testMethod.AssertNoException();
         }
@@ -61,6 +65,7 @@ namespace Spring.Context.Support
         private static object DoBackgroundWork(object[] args)
         {
             IApplicationContext ctx = (IApplicationContext) args[0];
+            Assert.IsNotNull(ctx, "Context is null.");
 
             object o;
             o = ctx.GetObject("singletonObject"); Assert.IsNotNull(o);

@@ -101,11 +101,10 @@ namespace Spring.Context.Support
         /// <param name="caseSensitive">Flag specifying whether to make this context case sensitive or not.</param>
         /// <param name="parentContext">The parent context.</param>
         /// <param name="configurationLocations">Names of configuration resources.</param>
-        public WebApplicationContext(string name, bool caseSensitive, IApplicationContext parentContext,
-                                     params string[] configurationLocations)
+        public WebApplicationContext(string name, bool caseSensitive, IApplicationContext parentContext, params string[] configurationLocations)
             : this(new WebApplicationContextArgs(name, parentContext, configurationLocations, null, caseSensitive))
-        { }
-
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WebApplicationContext"/> class.

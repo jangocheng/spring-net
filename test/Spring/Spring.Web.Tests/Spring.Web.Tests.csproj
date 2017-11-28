@@ -48,7 +48,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\..\build\VS.Net.2010\Spring.Web.Tests\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -107,6 +107,7 @@
     <Compile Include="Data\Spring\Objects\Factory\Support\TestForm.aspx.cs">
       <DependentUpon>TestForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Globalization\Resolvers\DefaultWebCultureResolverTests.cs" />
     <Compile Include="WebCompilerOptionsTests.cs" />
@@ -157,10 +158,18 @@
     <Compile Include="Web\UI\SessionModelPersistenceMediumTests.cs" />
     <Compile Include="Web\UI\UserControlTests.cs">
     </Compile>
-    <None Include="Data\Spring\Context\Support\WebApplicationContextTests\Web.Config" />
-    <None Include="Data\Spring\Web\Support\LocalResourceManagerTests\Web.Config" />
-    <None Include="Data\Spring\Web\Support\PageHandlerFactoryTests\Web.Config.net-1.1" />
-    <None Include="Data\Spring\Web\Support\PageHandlerFactoryTests\Web.Config.net-2.0" />
+    <None Include="Data\Spring\Context\Support\WebApplicationContextTests\Web.Config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Spring\Web\Support\LocalResourceManagerTests\Web.Config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Spring\Web\Support\PageHandlerFactoryTests\Web.Config.net-1.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Spring\Web\Support\PageHandlerFactoryTests\Web.Config.net-2.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Spring.Web.Tests.build" />
     <None Include="project.json" />
   </ItemGroup>
@@ -168,26 +177,43 @@
     <EmbeddedResource Include="Context\Support\HttpApplicationConfigurerTests.xml" />
     <EmbeddedResource Include="Context\Support\HttpApplicationConfigurerMergablePropertiesTests.xml" />
     <EmbeddedResource Include="Context\Support\WebContextHandlerTests.xml" />
-    <Content Include="Data\Spring\Context\Support\WebApplicationContextTests\Dummy.aspx" />
-    <Content Include="Data\Spring\Objects\Factory\Support\TestForm.aspx" />
-    <Content Include="Data\Spring\Web\Support\LocalResourceManagerTests\WithoutResources.aspx" />
-    <Content Include="Data\Spring\Web\Support\LocalResourceManagerTests\WithResources.aspx" />
-    <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\ReadOnlySession.aspx" />
+    <Content Include="Data\Spring\Context\Support\WebApplicationContextTests\Dummy.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Spring\Objects\Factory\Support\TestForm.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Spring\Web\Support\LocalResourceManagerTests\WithoutResources.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Spring\Web\Support\LocalResourceManagerTests\WithResources.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\ReadOnlySession.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\TransferAfterSetResult.aspx">
       <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\MaintainsSession1.aspx" />
+    <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\MaintainsSession1.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\MaintainsSession2.aspx">
       <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\DisablesSession.aspx">
       <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Spring\Web\Support\PageHandlerFactoryTests\TransferAfterSetResultSave.aspx">
       <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Data\Spring\Web\Support\LocalResourceManagerTests\App_LocalResources\WithResources.aspx.resx">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Web\Support\ControlInterceptionTests.objects.xml" />
   </ItemGroup>
@@ -234,9 +260,6 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\src\Spring\Spring.Core\Spring.Core.csproj">
       <Project>{8a750d18-1406-4664-b649-f1c6d36a861a}</Project>
       <Name>Spring.Core</Name>
@@ -254,9 +277,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>echo "Copying .xml files for tests"
-
-%25SystemRoot%25\system32\xcopy "$(ProjectDir)Data" $(OutDir) /y /s /q /d
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

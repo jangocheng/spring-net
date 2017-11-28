@@ -40,7 +40,7 @@ namespace Spring.Web.Support
     public class PageHandlerFactoryTests : WebFormTestCase
     {
         public PageHandlerFactoryTests()
-            : base("/Test", "/Spring/Web/Support/PageHandlerFactoryTests")
+            : base("/Test", "/Data/Spring/Web/Support/PageHandlerFactoryTests")
         {}
 
         [Test]
