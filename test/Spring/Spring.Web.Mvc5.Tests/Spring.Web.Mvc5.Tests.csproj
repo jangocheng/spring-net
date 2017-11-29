@@ -81,6 +81,10 @@
       <Project>{39aad7ea-2ed0-4e50-8d4d-c666ea9cbfe4}</Project>
       <Name>Spring.Web.Mvc5</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Spring.Web.Tests\Spring.Web.Tests.csproj">
+      <Project>{c67e47aa-1acd-41b4-a465-4d336a2319ca}</Project>
+      <Name>Spring.Web.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

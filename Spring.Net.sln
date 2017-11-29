@@ -36,7 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Web.Extensions", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Testing.NUnit", "src\Spring\Spring.Testing.NUnit\Spring.Testing.NUnit.csproj", "{ED204A7B-832F-44C7-BFE3-504AEBE1BCC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Testing.NUnit.Tests.2010", "test\Spring\Spring.Testing.NUnit.Tests\Spring.Testing.NUnit.Tests.2010.csproj", "{4D6D616B-7643-4D6B-8E5E-14ECFDB9AF82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Testing.NUnit.Tests", "test\Spring\Spring.Testing.NUnit.Tests\Spring.Testing.NUnit.Tests.csproj", "{4D6D616B-7643-4D6B-8E5E-14ECFDB9AF82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Messaging.Nms", "src\Spring\Spring.Messaging.Nms\Spring.Messaging.Nms.csproj", "{AEB1578C-9018-4D49-B440-789F38DD2F29}"
 EndProject
@@ -645,8 +645,8 @@ Global
 		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC} = {15BB0F1B-0FFB-450F-8FB1-8B202B1FBFFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		NAntAddinLastFileName = Spring.build
 		SolutionGuid = {A040A9AE-E451-40BB-8296-7F53484BA80D}
+		NAntAddinLastFileName = Spring.build
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Spring.Net.2010.vsmdi

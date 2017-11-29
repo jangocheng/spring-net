@@ -37,11 +37,7 @@ namespace Spring.Testing.NUnit
         {
             public static readonly string[] CONFIGLOCATIONS = new string[]
             {
-#if NUNIT_3
-                "assembly://Spring.Testing.NUnit3.Tests/Spring.Testing.NUnit/TestApplicationContext.xml"
-#else
                 "assembly://Spring.Testing.NUnit.Tests/Spring.Testing.NUnit/TestApplicationContext.xml"
-#endif
             };
 
             public TestAbstractDependencyInjectionSpringContextTests()
